@@ -4,14 +4,15 @@
   "description": "Broadcast important messages to others alongside your commits",
   "main": "src/index.js",
   "bin": {
-    "git-alert": "bin/git-alert.js"
+    "git-alert": "src/git-alert.js"
   },
   "scripts": {
     "pretest": "eslint ."
   },
   "dependencies": {
-    "nomnom": "*",
-    "colors": "*"
+    "yargs": "*",
+    "colors": "*",
+    "fs-extra": "*"
   },
   "devDependencies": {
     "eslint": "*",

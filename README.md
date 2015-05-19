@@ -31,9 +31,9 @@ after you `git pull` in your repository
 `git alert rm e3bfac` — removes specified message (yeap, each message has its hash,
 like commits)
 
-`git alert show` — shows pending (unread) messages
+`git alert show` — shows pending (unread) messages, marking them as read
 
-`git alert show --all` — shows all messages from `.gitalert` file (where they
+`git alert list` — lists all messages from `.gitalert` file (where they
 are actually stored)
 
 ## How it works?
@@ -51,8 +51,8 @@ Did I mention some details?
   
 * The list of read messages is stored locally in `.git` directory.
 
-* When you no longer need a message, you can delete it using `git alert show --all`
-  to locate it and its hash, then `git alert rm <hash>`.
+* When you no longer need a message, you can remove it: first locate it
+  and its hash with `git alert list`, then remove it with `git alert rm <hash>`.
   
   It is a good practice to keep an entire list of messages small.
   
