@@ -1,0 +1,41 @@
+{
+  "name": "git-alert",
+  "version": "0.0.0",
+  "description": "Broadcast important messages to others alongside your commits",
+  "main": "src/index.js",
+  "bin": {
+    "git-alert": "bin/git-alert.js"
+  },
+  "scripts": {
+    "pretest": "eslint ."
+  },
+  "dependencies": {
+    "nomnom": "*",
+    "colors": "*"
+  },
+  "devDependencies": {
+    "eslint": "*",
+    "pre-commit": "*"
+  },
+  "pre-commit": [ "test" ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inca/git-alert.git"
+  },
+  "keywords": [
+    "git",
+    "utils",
+    "cli",
+    "tool",
+    "commit",
+    "alert",
+    "collaboration",
+    "messages"
+  ],
+  "author": "Boris Okunskiy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inca/git-alert/issues"
+  },
+  "homepage": "https://github.com/inca/git-alert"
+}
