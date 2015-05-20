@@ -16,7 +16,8 @@
     "which": "*",
     "string": "*",
     "moment": "*",
-    "wordwrap": "*"
+    "wordwrap": "*",
+    "async": "*"
   },
   "devDependencies": {
     "eslint": "*",

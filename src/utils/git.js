@@ -6,7 +6,7 @@ var which = require('which')
 /**
  * Execute git command and buffer output.
  */
-module.exports = function (args, done) {
+var git = module.exports = exports = function (args, done) {
   which('git', function (err, git) {
     if (err) return done(err);
     var ps = spawn(git, args)
@@ -23,8 +23,21 @@ module.exports = function (args, done) {
     });
     ps.on('close', function (code) {
       if (code == 0)
-        return done(null, stdout, stderr);
-      return done(stderr);
+        return done(null, stdout.trim());
+      return done(stderr.trim());
     });
   });
 };
+
+exports.getDir = function (done) {
+  git(['rev-parse', '--show-toplevel'], done);
+};
+
+exports.getAuthorName = function (done) {
+  git(['config', 'user.name'], done);
+};
+
+exports.getAuthorEmail = function (done) {
+  git(['config', 'user.email'], done);
+};
+

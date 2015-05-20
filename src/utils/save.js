@@ -1,6 +1,6 @@
 'use strict';
 
-var gitdir = require('./gitdir')
+var git = require('./git')
   , fs = require('fs-extra')
   , path = require('path');
 
@@ -8,7 +8,7 @@ var gitdir = require('./gitdir')
  * Save messages list.
  */
 module.exports = function (messages, done) {
-  gitdir(function (err, cwd) {
+  git.getDir(function (err, cwd) {
     if (err) return done(err);
     var file = path.join(cwd, '.gitalert')
       , data = JSON.stringify(messages, null, 2);

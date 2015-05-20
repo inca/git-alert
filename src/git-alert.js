@@ -11,10 +11,11 @@ var argv = yargs
   .command('show', 'Show unread messages and mark them as read')
   .command('rm', 'Remove a message')
   .command('install', 'Install post-merge hook in repository')
-  .example('git alert \'Hello world\'', 'Add a message to .gitalert')
-  .example('git show', 'Show pending (unread) messages')
-  .example('git list', 'List all messages')
-  .example('git rm e3bc5', 'Remove a message with specified hash')
+  .example('git alert \'Hello world\'', 'Add a simple message')
+  .example('git alert \'Hello world\' --warn', 'Add a warning')
+  .example('git alert show', 'Show pending (unread) messages')
+  .example('git alert list', 'List all messages')
+  .example('git alert rm e3bc5', 'Remove a message with specified hash')
   .demand(1, 'Specify a command or message')
   .argv;
 
@@ -23,11 +24,6 @@ var commands = ['list', 'show', 'rm', 'install']
 
 if (commands.indexOf(cmd) != -1)
   return require('./cli/' + cmd)(yargs);
-
-if (argv._.length > 1)
-  return yargs
-    .epilogue('More options than expected; be sure to wrap your message in quotes.')
-    .showHelp();
 
 require('./cli/add')(yargs);
 
