@@ -12,7 +12,11 @@
   "dependencies": {
     "yargs": "*",
     "colors": "*",
-    "fs-extra": "*"
+    "fs-extra": "*",
+    "which": "*",
+    "string": "*",
+    "moment": "*",
+    "wordwrap": "*"
   },
   "devDependencies": {
     "eslint": "*",
