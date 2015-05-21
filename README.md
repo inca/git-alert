@@ -62,6 +62,11 @@ Did I mention some details?
 * In case you miss messages (e.g. when automatic merge fails `post-merge` hooks
   are not executed) you can always read them manually via `git alert show`.
   
+## Bonus: auto-install hook in Node.js
+
+Just add `git-alert` to your `devDependencies` and the hook will be installed
+via `npm i`.
+  
 ## License
 
 ISC / Boris Okunskiy

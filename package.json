@@ -7,7 +7,8 @@
     "git-alert": "src/git-alert.js"
   },
   "scripts": {
-    "pretest": "eslint ."
+    "pretest": "eslint .",
+    "install": "git alert install"
   },
   "dependencies": {
     "yargs": "*",
