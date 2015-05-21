@@ -8,7 +8,7 @@
   },
   "scripts": {
     "pretest": "eslint .",
-    "install": "node scripts/install.js"
+    "install": "node bin/git-alert.js install"
   },
   "dependencies": {
     "yargs": "*",
