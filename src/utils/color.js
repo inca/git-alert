@@ -3,12 +3,12 @@
 module.exports = function (msg) {
   switch (msg.level) {
     case 'info':
-      return 'green';
+      return 'cyan';
     case 'warn':
       return 'yellow';
     case 'critical':
       return 'red';
     default:
-      return 'gray';
+      return 'green';
   }
 };

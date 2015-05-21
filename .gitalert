@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "name": "Boris Okunskiy",
+    "email": "i@savant.pro",
+    "message": "Hi, captain!",
+    "date": "2015-05-20T15:16:11.413Z",
+    "level": "info",
+    "hash": "b100a2179888c965ff0444839cd3c9394a23219bfea2fa38551e7c53fb5a77e8"
+  },
+  {
+    "name": "Boris Okunskiy",
+    "email": "i@savant.pro",
+    "message": "Aye, aye, captain!",
+    "date": "2015-05-20T15:17:20.100Z",
+    "level": "default",
+    "hash": "1c75f404e5b143c018953303d5259eed03d4d07239ee6bac00c29abcd8591eb3"
+  },
+  {
+    "name": "Boris Okunskiy",
+    "email": "i@savant.pro",
+    "message": "Bacon ipsum dolor amet swine ham hock sirloin alcatra shankle. Porchetta chicken short loin t-bone shoulder, boudin chuck short ribs doner pancetta. Spare ribs chicken leberkas sirloin andouille. Brisket swine pastrami leberkas boudin pig filet mignon pancetta ball tip ham capicola venison pork chop short loin short ribs.",
+    "date": "2015-05-21T10:16:14.731Z",
+    "level": "critical",
+    "hash": "bff65a43150dfabfc20ed91fd9a52ea139455cfed16642addb0004bef5bfdcda"
+  },
+  {
+    "name": "Boris Okunskiy",
+    "email": "i@savant.pro",
+    "message": "A warning.",
+    "date": "2015-05-21T10:20:23.219Z",
+    "level": "warn",
+    "hash": "398af003c0e2b07e44639d3bb08f17a2b1d8cdc605dc17960f030c509ce8f381"
+  }
+]

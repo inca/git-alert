@@ -36,14 +36,9 @@ module.exports = function (text, level, done) {
     };
     msg.hash = digest(msg);
     // Check if this message already exists
-    var existing = null;
-    for (var i = 0; i < messages.length; i++) {
-      var m = messages[i];
-      if (m.hash == msg.hash){
-        existing = m;
-        break;
-      }
-    }
+    var existing = _find(messages, function (m) {
+      return m.hash == msg.hash;
+    });
     if (existing) {
       existing.level = level;
     } else {
@@ -52,3 +47,12 @@ module.exports = function (text, level, done) {
     save(messages, done);
   });
 };
+
+function _find(array, predicate) {
+  for (var i = 0; i < array.length; i++) {
+    var item = array[i];
+    if (predicate(item))
+      return item;
+  }
+  return null;
+}
