@@ -23,7 +23,7 @@ var commands = ['list', 'show', 'rm', 'install']
   , cmd = argv._[0];
 
 if (commands.indexOf(cmd) != -1)
-  return require('./cli/' + cmd)(yargs);
+  return require('../src/cli/' + cmd)(yargs);
 
-require('./cli/add')(yargs);
+require('../src/cli/add')(yargs);
 
