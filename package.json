@@ -2,7 +2,7 @@
   "name": "git-alert",
   "version": "0.0.2",
   "description": "Broadcast important messages to others alongside your commits",
-  "main": "src/index.js",
+  "main": "bin/git-alert.js",
   "bin": {
     "git-alert": "bin/git-alert.js"
   },
