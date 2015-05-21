@@ -4,6 +4,7 @@ var done = require('../src/utils/done')
   , git = require('../src/utils/git')
   , hook = require('../src/utils/hook')
   , colors = require('colors')
+  , path = require('path')
   , fs = require('fs');
 
 /**
@@ -14,7 +15,8 @@ git.getDir(function (err, gitdir) {
     // not a git dir, don't do anything
     return done();
   }
-  fs.stat('node_modules/git-alert', function (err) {
+  var installDir = path.join(gitdir, 'node_modules/git-alert');
+  fs.stat(installDir, function (err) {
     var cmd = err ? 'git alert show'
       : 'node node_modules/git-alert/bin/git-alert.js show';
     hook('post-merge', cmd, function (err) {
