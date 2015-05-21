@@ -1,6 +1,6 @@
 {
   "name": "git-alert",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Broadcast important messages to others alongside your commits",
   "main": "src/index.js",
   "bin": {
@@ -24,7 +24,9 @@
     "eslint": "*",
     "pre-commit": "*"
   },
-  "pre-commit": [ "test" ],
+  "pre-commit": [
+    "test"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/inca/git-alert.git"
