@@ -10,7 +10,7 @@ var git = require('./git')
 module.exports = exports = function (done) {
   git.getDir(function (err, cwd) {
     if (err) return done(err);
-    fs.readJsonFile(path.join(cwd, '.gitalert'), 'utf-8', function (ignoredErr, messages) {
+    fs.readJson(path.join(cwd, '.gitalert'), 'utf-8', function (ignoredErr, messages) {
       messages = Array.isArray(messages) ? messages : [];
       done(null, messages);
     });
